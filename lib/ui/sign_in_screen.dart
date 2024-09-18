@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+class SignInScreen extends StatefulWidget {
+  const SignInScreen({super.key});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<SignInScreen> createState() => _SignInScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "Sign up",
+                "Login",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 34),
               ),
               SizedBox(
@@ -33,28 +33,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     boxShadow: [BoxShadow(color: Colors.white54)]),
                 child: TextField(
                   decoration: InputDecoration(
-                    enabledBorder:
-                        OutlineInputBorder(borderSide: BorderSide.none),
-                    label: Text("Name"),
-                    suffixIcon: Icon(
-                      Icons.check,
-                      color: Colors.greenAccent,
-                      size: 30,
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: MediaQuery.sizeOf(context).height * 0.02,
-              ),
-              const DecoratedBox(
-                decoration: BoxDecoration(
-                    boxShadow: [BoxShadow(color: Colors.white54)]),
-                child: TextField(
-                  decoration: InputDecoration(
                     label: Text("Email"),
                     enabledBorder:
-                        OutlineInputBorder(borderSide: BorderSide.none),
+                    OutlineInputBorder(borderSide: BorderSide.none),
                   ),
                 ),
               ),
@@ -68,7 +49,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   decoration: InputDecoration(
                     label: Text("Password"),
                     enabledBorder:
-                        OutlineInputBorder(borderSide: BorderSide.none),
+                    OutlineInputBorder(borderSide: BorderSide.none),
                   ),
                 ),
               ),
@@ -81,9 +62,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     const Text(
-                      'Already have an account?',
+                      'Forgot Your Password?',
                       style:
-                          TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+                      TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
                     ),
                     SizedBox(
                       width: MediaQuery.sizeOf(context).width * 0.02,
@@ -101,13 +82,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(28),
                 child: MaterialButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, "signIn");
-                  },
+                  onPressed: () {},
                   minWidth: MediaQuery.sizeOf(context).width,
                   color: Colors.red,
                   child: const Text(
-                    "SIGN UP",
+                    "LOGIN",
                     style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
@@ -116,13 +95,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
               SizedBox(
-                height: MediaQuery.sizeOf(context).height * 0.06,
+                height: MediaQuery.sizeOf(context).height * 0.08,
               ),
               const Center(
                   child: Text(
-                "Or sign up with social account",
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-              )),
+                    "Or sign up with social account",
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+                  )),
               SizedBox(
                 height: MediaQuery.sizeOf(context).height * 0.01,
               ),
